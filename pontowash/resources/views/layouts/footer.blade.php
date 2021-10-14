@@ -1,3 +1,3 @@
 <div class="footer-left">
-    Todos os direitos reservados &copy; {{ date('Y') }}
+    Todos os direitos reservados Wesley Gomes &copy; {{ date('Y') }}
 </div>

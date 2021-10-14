@@ -13,6 +13,7 @@
                             <div class="row">
                             <a href="/usuarios" class="text-white">
                                 <div class="col-md-4 col-xl-4">
+                                    
                                     <div class="card bg-c-blue order-card">
                                             <div class="card-blok">
                                                 <h5>Colaboradores</h5>
@@ -24,6 +25,7 @@
                                                 <p class="m-b-o text-right"><a href="/usuarios" class="text-white">Ver Mais</a></p>
                                             </div>
                                     </div>
+                                    
                                  </div>
                             </a>
                             <a href="/roles" class="text-white">

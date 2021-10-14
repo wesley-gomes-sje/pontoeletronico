@@ -4222,4 +4222,19 @@ body:not(.sidebar-mini) .sidebar-style-2 .sidebar-menu li.active ul.dropdown-men
     color: #FFCE43 ;
     border: 1px solid;
 }
+#btnPrEditSave{
+    background-color: #0c9600;
+}
+#btnPrEditSave:hover{
+    background-color: #026b19 !important;
+}
 
+#btnPrPasswordEditSave{
+
+    background-color: #0c9600;
+}
+
+#btnPrPasswordEditSave{
+    
+    background-color: #026b19 !important;
+}
