@@ -15,6 +15,8 @@ class CreateUsuariosHasHorarios extends Migration
     {
         Schema::create('usuarios_has_horarios', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('idUsuario')->constrained('users');
+            $table->foreignId('idHora')->references('idHorario')->on('horarios');
             $table->timestamps();
         });
     }
