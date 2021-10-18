@@ -18,9 +18,9 @@
                             <table class="table table-striped mt-2">
                                 <thead style="background-color: #FFCE43;">
                                 <th style="display: none;">ID</th>
-                                <th style="color: #fff;">Titulo</th>
-                                <th style="color: #fff;">Conteudo</th>
-                                <th style="color: #fff;">Ações</th>
+                                <th style="color: #000;">Titulo</th>
+                                <th style="color: #000;">Conteudo</th>
+                                <th style="color: #000;">Ações</th>
                                 </thead> 
                                 <tbody>
                                     @foreach($blogs as $blog)

@@ -15,8 +15,8 @@
                            @endcan
                            <table class="table table-striped mt-2">
                                 <thead style="background-color: #FFCE43;">
-                                <th style="color: #fff;">Função</th>
-                                <th style="color: #fff;">Ações</th>
+                                <th style="color: #000;">Função</th>
+                                <th style="color: #000;">Ações</th>
                                 </thead> 
                                 <tbody>
                                     @foreach($roles as $role)

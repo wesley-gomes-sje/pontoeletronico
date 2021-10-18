@@ -16,10 +16,10 @@
                             <table class="table table-striped mt-2">
                                 <thead style="background-color: #FFCE43;">
                                 <th style="display: none;">ID</th>
-                                <th style="color: #fff;">Nome</th>
-                                <th style="color: #fff;">Email</th>
-                                <th style="color: #fff;">Privilégio</th>
-                                <th style="color: #fff;">Ações</th>
+                                <th style="color: #000;">Nome</th>
+                                <th style="color: #000;">Email</th>
+                                <th style="color: #000;">Privilégio</th>
+                                <th style="color: #000;">Ações</th>
                                 </thead> 
                                 <tbody>
                                     @foreach($usuarios as $usuario)

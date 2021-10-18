@@ -15,10 +15,10 @@
                            @endcan
                            <table class="table table-striped mt-2">
                                 <thead style="background-color: #FFCE43;">
-                                <th style="color: #fff;">Turno</th>
-                                <th style="color: #fff;">Horario Inicial</th>
-                                <th style="color: #fff;">Horario Final</th>
-                                <th style="color: #fff;">Ações</th>
+                                <th style="color: #000;">Turno</th>
+                                <th style="color: #000;">Horario Inicial</th>
+                                <th style="color: #000;">Horario Final</th>
+                                <th style="color: #000;">Ações</th>
                                 </thead> 
                                 <tbody>
                                 </tbody>
@@ -54,10 +54,10 @@
                             @endcan
                             <table class="table table-striped mt-2">
                                 <thead style="background-color: #FFCE43;">
-                                <th style="color: #fff;">Colaborador</th>
-                                <th style="color: #fff;">Função</th>
-                                <th style="color: #fff;">Horario Inicial</th>
-                                <th style="color: #fff;">Horario Final</th>
+                                <th style="color: #000;">Colaborador</th>
+                                <th style="color: #000;">Função</th>
+                                <th style="color: #000;">Horario Inicial</th>
+                                <th style="color: #000;">Horario Final</th>
                                 </thead> 
                                 <tbody>
                                 </tbody>
