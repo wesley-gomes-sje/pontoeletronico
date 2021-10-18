@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsuariosHasHorarios extends Migration
+class CreateHorariosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateUsuariosHasHorarios extends Migration
      */
     public function up()
     {
-        Schema::create('usuarios_has_horarios', function (Blueprint $table) {
+        Schema::create('horarios', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('idUsuario')->constrained('users');
-            $table->foreignId('idHora')->references('idHorario')->on('horarios');
+            $table->string('turno');
+            $table->time('inicial');
+            $table->time('final');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateUsuariosHasHorarios extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuarios_has_horarios');
+        Schema::dropIfExists('horarios');
     }
 }

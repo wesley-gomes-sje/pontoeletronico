@@ -24,6 +24,12 @@ class SeederTablaPermisos extends Seeder
             'criar-recado',
             'editar-recado',
             'excluir-recado',
+
+            'ver-horario',
+            'criar-horario',
+            'editar-horario',
+            'excluir-horario',
+
         ];
         foreach($permisos as $permiso){
             Permission::create(['name'=>$permiso]);
