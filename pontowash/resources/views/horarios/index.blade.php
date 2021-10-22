@@ -50,7 +50,7 @@
                             <br>
 
                             @can('criar-horario')
-                            <a href="" class="btn btn-success" style="border:none;box-shadow: none;">Adicionar Colaborador <strong>+</strong></a>
+                            <a href="{{ route('turno.index') }}" class="btn btn-success" style="border:none;box-shadow: none;">Adicionar Colaborador <strong>+</strong></a>
                             @endcan
                             <table class="table table-striped mt-2">
                                 <thead style="background-color: #FFCE43;">

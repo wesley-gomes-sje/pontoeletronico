@@ -8,6 +8,7 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\HorarioController;
 use App\Http\Controllers\RelatorioController;
 use App\Http\Controllers\RolController;
+use App\Http\Controllers\TurnoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,4 +40,6 @@ Route::group(['middleware' => ['auth']], function(){
     Route::resource('blog', BlogController::class);
     Route::resource('relatorios', RelatorioController::class);
     Route::resource('horarios', HorarioController::class);
+    Route::resource('turno', TurnoController::class);
+   
 });
