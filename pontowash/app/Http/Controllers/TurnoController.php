@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Horario;
 use App\Models\Turno;
+use Illuminate\Support\Facades\DB;
 
 class TurnoController extends Controller
 {
@@ -20,9 +21,7 @@ class TurnoController extends Controller
      */
     public function index()
     {
-        $usuarios = $this->user->orderBy('name', 'ASC')->get();
-        $horarios = $this->horario->orderBy('turno', 'ASC')->get();
-        return view('turno.criar',['usuarios'=> $usuarios, 'horarios'=> $horarios]);
+        
     }
 
     /**
@@ -32,6 +31,9 @@ class TurnoController extends Controller
      */
     public function create()
     {
+        $usuarios = $this->user->orderBy('name', 'ASC')->get();
+        $horarios = $this->horario->orderBy('turno', 'ASC')->get();
+        return view('turno.criar',['usuarios'=> $usuarios, 'horarios'=> $horarios]);
         
     }
 

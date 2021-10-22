@@ -44,27 +44,45 @@
                                     @endforeach
 
                             </table>
-                            <div class="pagination justify-content-end">
-                                {!! $horarios->links() !!}
-                            </div>
+                            
                             <br>
 
                             @can('criar-horario')
-                            <a href="{{ route('turno.index') }}" class="btn btn-success" style="border:none;box-shadow: none;">Adicionar Colaborador <strong>+</strong></a>
+                            <a href="{{ route('turno.create') }}" class="btn btn-success" style="border:none;box-shadow: none;">Adicionar Colaborador <strong>+</strong></a>
                             @endcan
                             <table class="table table-striped mt-2">
-                                <thead style="background-color: #FFCE43;">
-                                <th style="color: #000;">Colaborador</th>
-                                <th style="color: #000;">Função</th>
-                                <th style="color: #000;">Horario Inicial</th>
-                                <th style="color: #000;">Horario Final</th>
-                                </thead> 
-                                <tbody>
-                                </tbody>
+                                    <thead style="background-color: #FFCE43;">
+                                    <th style="color: #000;">Colaborador</th>
+                                    <th style="color: #000;">Horario Inicial</th>
+                                    <th style="color: #000;">Horario Final</th>
+                                    <th style="color: #000;">Ações</th>
+                                    </thead> 
+                                    <tbody>
+                                    </tbody>
+                                    @foreach($colaboradores as $colaborador)
+                                        <tr>
+                                            <td style="display:none;">{{$colaborador->id}}</td>
+                                            <td>{{$colaborador->nome}}</td>
+                                            <td>{{$colaborador->ini}}</td>
+                                            <td>{{$colaborador->fim}}</td>
+
+                                            <td>
+                                                <form action="{{ route('turno.destroy',$colaborador->id) }}" method="POST">
+                                                    @can('editar-horario')
+                                                    <a href="{{ route('turno.edit',$colaborador->id) }}" class="btn btn-info">Editar</a>
+                                                    @endcan
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    @can('excluir-horario')
+                                                    <button type="submit" class="btn btn-danger">Deletar</button>
+                                                    @endcan
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                             </table>
-                            <div class="pagination justify-content-end">
-                                {!! $horarios->links() !!}
-                            </div>
+                            
+                            
                         </div>
                     </div>
                 </div>

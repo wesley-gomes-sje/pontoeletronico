@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Horario;
+use Illuminate\Support\Facades\DB;
 
 class HorarioController extends Controller
 {
@@ -22,8 +23,13 @@ class HorarioController extends Controller
      */
     public function index()
     {
+        $colaboradores = DB::table('users')
+                           ->join('turnos','users.id','=', 'turnos.idUsuario')
+                           ->join('horarios','horarios.id','=', 'turnos.idHora')
+                           ->select('turnos.id as id','users.name as nome','horarios.inicial as ini','horarios.final as fim')
+                           ->get();
         $horarios = Horario::paginate(8); 
-        return view('horarios.index', compact('horarios'));
+        return view('horarios.index', ['colaboradores'=>$colaboradores,'horarios'=>$horarios]);
     }
 
     /**
