@@ -10,9 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class TurnoController extends Controller
 {
-    public function __construct(User $user, Horario $horario){
+    public function __construct(User $user, Horario $horario, Turno $tur){
         $this->user = $user;
         $this->horario = $horario;
+        $this->tur = $tur;
     }
     /**
      * Display a listing of the resource.
@@ -21,7 +22,7 @@ class TurnoController extends Controller
      */
     public function index()
     {
-        
+
     }
 
     /**
@@ -74,7 +75,22 @@ class TurnoController extends Controller
      */
     public function edit($id)
     {
-        //
+        /*$dados = DB::table('turnos')
+                     ->join('horarios','turnos.idHora','=','horarios.id')
+                     ->select( 'turnos.id as id','horarios.id as idHorario', 'horarios.turno as nTurno')
+                     ->get();
+
+       // $idTurno = $this->tur->where('id','=',$id)->first();
+        
+        //dd($idTurno);
+        dd($dados);
+        return view('turno.editar',['dados'=>$dados]);*/
+
+        $turno=$this->tur->find($id);
+        //dd($turno);
+        $horas=$this->horario->all();
+        //dd($horas);
+        return view('turno.editar',['turno'=> $turno, 'horas'=> $horas]);
     }
 
     /**
@@ -86,7 +102,11 @@ class TurnoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       // dd($request);
+        $this->tur->where(['id'=>$id])->update([
+                'idHora'=>$request->idHora
+        ]);   
+        return redirect()->route('horarios.index');
     }
 
     /**
@@ -95,8 +115,9 @@ class TurnoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Turno $turno)
     {
-        //
+        $turno->delete();
+        return redirect()->route('horarios.index');
     }
 }

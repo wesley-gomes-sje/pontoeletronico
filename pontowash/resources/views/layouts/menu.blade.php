@@ -2,6 +2,9 @@
     <a class="nav-link" href="/home" style="background-color: #000000; color: #FFCE43;">
         <i class=" fas fa-building"></i><span>Dashboard</span>
     </a>
+    <a class="nav-link" href="#" style="background-color: #000000; color: #FFCE43;">
+        <i class=" fas fa-fingerprint"></i><span>Bater Ponto</span>
+    </a>
     <a class="nav-link" href="/roles" style="background-color: #000000; color: #FFCE43;">
         <i class=" fas fa-user-lock"></i><span>Permissões</span>
     </a>

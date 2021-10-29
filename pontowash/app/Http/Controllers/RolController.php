@@ -12,7 +12,7 @@ class RolController extends Controller
 {
 
     function __construct(){
-        $this->middleware('permission:ver-cargo|criar-cargo|editar-cargo|excluir-cargo',['only'=>['index']]);
+        $this->middleware('permission:criar-cargo|editar-cargo|excluir-cargo',['only'=>['index']]);
         $this->middleware('permission:criar-cargo',['only'=>['create','store']]);
         $this->middleware('permission:editar-cargo',['only'=>['edit','update']]);
         $this->middleware('permission:excluir-cargo',['only'=>['destroy']]); 

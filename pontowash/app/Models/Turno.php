@@ -9,6 +9,9 @@ class Turno extends Model
 {
     use HasFactory;
     protected $fillable = ['id','idUsuario','idHora'];
+    /*public function allTurnos(){
+        return $this->hasOne();
+    }*/
 
 
 }
